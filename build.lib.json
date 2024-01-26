@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "declaration": true,
+    "rootDir": "./src",
+    "outDir": "./lib/",
+    "paths": {
+      "calculator": ["./src/calculator.js"]
+    }
+  },
+  "include": ["./src/**/*"]
+}

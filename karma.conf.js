@@ -1,0 +1,67 @@
+const path = require("path");
+
+module.exports = function (config) {
+  config.set({
+    frameworks: ["jasmine"],
+    proxies: {
+      "/node_modules/": "/base/node_modules/",
+    },
+    files: [
+      { pattern: "importmap.js" },
+      { pattern: "./node_modules/d3/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-array/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-axis/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-chord/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-brush/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-color/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-contour/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-delaunay/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-dispatch/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-drag/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-dsv/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-ease/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-fetch/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-force/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-format/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-geo/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-hierarchy/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-interpolate/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-path/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-polygon/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-quadtree/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-random/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-scale/src/**/*.js", type: "module" },
+      {
+        pattern: "./node_modules/d3-scale-chromatic/src/**/*.js",
+        type: "module",
+      },
+      { pattern: "./node_modules/d3-selection/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-shape/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-time/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-time-format/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-timer/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-transition/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/d3-zoom/src/**/*.js", type: "module" },
+      { pattern: "./node_modules/internmap/**/*.js", type: "module" },
+      { pattern: "./node_modules/delaunator/**/*.js", type: "module" },
+      { pattern: "./node_modules/robust-predicates/**/*.js", type: "module" },
+      { pattern: "./src/**/*.js", type: "module" },
+      { pattern: "./test/**/*.js", type: "module" },
+    ],
+    preprocessors: {
+      "src/**/!(*.test).js": ["karma-coverage-istanbul-instrumenter"],
+    },
+    reporters: ["spec", "coverage-istanbul"],
+    coverageIstanbulInstrumenter: {
+      esModules: true,
+    },
+    coverageIstanbulReporter: {
+      reports: ["html", "text", "lcovonly"],
+      dir: path.join(__dirname, "coverage"),
+      skipFilesWithNoCoverage: true,
+    },
+    browsers: ["ChromeHeadless"],
+    singleRun: true,
+    logLevel: config.LOG_DISABLE,
+  });
+};

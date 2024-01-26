@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "baseUrl": "."
+  },
+  "include": ["./src/**/*", "./test/**/*"],
+  "typedocOptions": {
+    "entryPoints": ["./src/calculator.ts", "./src/d3.example.ts"],
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "disableSources": true,
+    "categorizeByGroup": false,
+    "sort": ["static-first", "visibility"],
+    "name": "D3 Example",
+    "hideGenerator": true
+  }
+}
