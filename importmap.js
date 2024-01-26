@@ -1,5 +1,6 @@
 const importmap = {
   imports: {
+    lit: "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js",
     d3: "./node_modules/d3/src/index.js",
     "d3-array": "./node_modules/d3-array/src/index.js",
     "d3-axis": "./node_modules/d3-axis/src/index.js",

@@ -62,6 +62,6 @@ module.exports = function (config) {
     },
     browsers: ["ChromeHeadless"],
     singleRun: true,
-    logLevel: config.LOG_DISABLE,
+    logLevel: config.DEBUG,
   });
 };

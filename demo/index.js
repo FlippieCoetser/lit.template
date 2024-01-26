@@ -8,3 +8,6 @@ const configuration = {
   height: 500,
 };
 run(configuration);
+
+import { MyElement } from "../lib/lit.example.js";
+customElements.define("my-element", MyElement);
