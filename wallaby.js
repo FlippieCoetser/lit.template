@@ -1,6 +1,12 @@
 module.exports = function (wallaby) {
   return {
-    files: ["importmap.js", "src/**/*.ts"],
+    files: [
+      "importmap.js",
+      "src/**/*.ts",
+      "node_modules/lit/decorators.js",
+      "node_modules/@lit/reactive-element/decorators/*.js",
+      "node_modules/@lit/reactive-element/*.js",
+    ],
     tests: ["test/*.ts"],
     trace: true,
     compilers: {
