@@ -1,5 +1,5 @@
 {
-  "name": "@browser-modules/d3.template",
+  "name": "@browser-modules/lit.template",
   "version": "1.0.0",
   "description": "D3 Typescript based template for creating browser compatible ES6 modules, including unit tests and documentation",
   "browser": "lib/lit.example.js",
@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlippieCoetser/d3.template.git"
+    "url": "git+https://github.com/FlippieCoetser/lit.template.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FlippieCoetser/d3.template/issues"
+    "url": "https://github.com/FlippieCoetser/lit.template/issues"
   },
-  "homepage": "https://github.com/FlippieCoetser/d3.template#readme",
+  "homepage": "https://github.com/FlippieCoetser/lit.template#readme",
   "devDependencies": {
     "@types/jasmine": "^5.1.4",
     "http-server": "^14.1.1",
@@ -46,8 +46,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@types/d3": "^7.4.3",
-    "d3": "^7.8.5",
     "lit": "^3.1.1"
   }
 }
