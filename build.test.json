@@ -5,11 +5,13 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "inlineSources": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
   },
   "include": ["./src/**/*", "./test/**/*"],
   "typedocOptions": {
-    "entryPoints": ["./src/calculator.ts", "./src/d3.example.ts"],
+    "entryPoints": ["./src/calculator.ts", "./src/lit.example.ts"],
     "excludePrivate": true,
     "excludeProtected": true,
     "disableSources": true,

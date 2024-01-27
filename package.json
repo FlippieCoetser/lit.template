@@ -2,7 +2,7 @@
   "name": "@browser-modules/d3.template",
   "version": "1.0.0",
   "description": "D3 Typescript based template for creating browser compatible ES6 modules, including unit tests and documentation",
-  "browser": "lib/calculator.js",
+  "browser": "lib/lit.example.js",
   "files": [
     "lib/",
     "tasks/"
