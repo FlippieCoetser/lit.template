@@ -10,7 +10,7 @@ export class MyElement extends LitElement {
 
   render = () => html`
     <p>${this.myProperty}</p>
-    <button id="myButton" @click=${this.updateProperty}>Update</button>
+    <button @click=${this.updateProperty}>Update</button>
   `;
 
   updateProperty = () => {
