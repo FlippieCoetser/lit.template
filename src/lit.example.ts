@@ -1,14 +1,8 @@
 import { LitElement, html } from "lit";
 import { property } from "lit/decorators.js";
+import { query } from "lit/decorators/query.js";
 
 export class MyElement extends LitElement {
-  constructor() {
-    super();
-    // for testing a custom event on component
-    this.addEventListener("my-event", (e) => {
-      console.log("my-event");
-    });
-  }
   // attribute is used to define a custom attribute name associated with this property
   // reflect is used to establish a two-way data binding between the property and the attribute
   @property({ attribute: "attribute", type: String, reflect: true })
@@ -16,7 +10,7 @@ export class MyElement extends LitElement {
 
   render = () => html`
     <p>${this.myProperty}</p>
-    <button @click=${this.updateProperty}>Update</button>
+    <button id="myButton" @click=${this.updateProperty}>Update</button>
   `;
 
   updateProperty = () => {

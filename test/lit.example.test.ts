@@ -9,8 +9,10 @@ describe("lit.Example", () => {
     expect(element).toBeInstanceOf(MyElement);
   });
   it("custom event should fire on button click", () => {
-    const element = document.createElement("my-element");
-    const button = element.querySelector("button");
-    button?.click();
+    let flag = false;
+    const element = document.createElement("my-element") as MyElement;
+    element.addEventListener("my-event", (e) => (flag = true));
+    element.updateProperty();
+    expect(flag).toBe(true);
   });
 });
