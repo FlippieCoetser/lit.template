@@ -1,6 +1,5 @@
 import { LitElement, html } from "lit";
 import { property } from "lit/decorators.js";
-import { query } from "lit/decorators/query.js";
 
 export class MyElement extends LitElement {
   // attribute is used to define a custom attribute name associated with this property.
