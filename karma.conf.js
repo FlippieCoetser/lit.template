@@ -8,6 +8,12 @@ module.exports = function (config) {
     },
     files: [
       { pattern: "importmap.js" },
+      { pattern: "./node_modules/lit/decorators.js", type: "module" },
+      {
+        pattern: "./node_modules/@lit/reactive-element/decorators/*.js",
+        type: "module",
+      },
+      { pattern: "./node_modules/@lit/reactive-element/*.js", type: "module" },
       { pattern: "./src/**/*.js", type: "module" },
       { pattern: "./test/**/*.js", type: "module" },
     ],
