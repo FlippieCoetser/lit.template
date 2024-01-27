@@ -8,7 +8,9 @@
     "outDir": "./lib/",
     "paths": {
       "calculator": ["./src/calculator.js"]
-    }
+    },
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
   },
   "include": ["./src/**/*"]
 }
