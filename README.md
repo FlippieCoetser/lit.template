@@ -2,9 +2,7 @@
 
 Bundle free lit typescript template used to create a browser compatible es6 module, including unit tests and documentation.
 
-Lit can be loaded from a CDN or from NPM. See importmaps below.
-
-## Usage
+Lit can be loaded from a CDN or from locally installed NPM package. The demo app uses the CDN and the unit test uses the locally install NPM package.
 
 ### CDN
 
@@ -41,3 +39,5 @@ Lit can be loaded from a CDN or from NPM. See importmaps below.
   }
 </script>
 ```
+
+Note: Unit test requires additional configuration. See `wallaby.js`, `karma.conf.js` and `importmap.js` for details.
