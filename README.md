@@ -1,6 +1,6 @@
-# D3 Typescript Template
+# Lit Typescript Template
 
-Bundle free d3 typescript template used to create a browser compatible es6 module, including unit tests and documentation.
+Bundle free lit typescript template used to create a browser compatible es6 module, including unit tests and documentation.
 
 Lit can be loaded from a CDN or from NPM. See importmaps below.
 
