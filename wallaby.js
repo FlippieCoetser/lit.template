@@ -3,7 +3,10 @@ module.exports = function (wallaby) {
     files: [
       "importmap.js",
       "src/**/*.ts",
+      "node_modules/lit/index.js",
       "node_modules/lit/decorators.js",
+      "node_modules/lit-html/*.js",
+      "node_modules/lit-element/lit-element.js",
       "node_modules/@lit/reactive-element/decorators/*.js",
       "node_modules/@lit/reactive-element/*.js",
     ],

@@ -8,7 +8,10 @@ module.exports = function (config) {
     },
     files: [
       { pattern: "importmap.js" },
+      { pattern: "./node_modules/lit/index.js", type: "module" },
       { pattern: "./node_modules/lit/decorators.js", type: "module" },
+      { pattern: "./node_modules/lit-html/*.js", type: "module" },
+      { pattern: "./node_modules/lit-element/lit-element.js", type: "module" },
       {
         pattern: "./node_modules/@lit/reactive-element/decorators/*.js",
         type: "module",
@@ -31,6 +34,6 @@ module.exports = function (config) {
     },
     browsers: ["ChromeHeadless"],
     singleRun: true,
-    logLevel: config.LOG_DISABLE,
+    logLevel: config.DEBUG,
   });
 };
