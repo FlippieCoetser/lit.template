@@ -14,6 +14,7 @@ export class MyElement extends LitElement {
     <button @click=${this.updateProperty}>Update</button>
   `;
 
+  // operation is available on component returned from document.querySelector("my-element")
   updateProperty = () => {
     this.myProperty = "new value";
     const event = new CustomEvent("my-event", {
